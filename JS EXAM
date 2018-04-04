@@ -1,0 +1,25 @@
+//;
+//(function () {
+//
+//	alert('приступим!');
+//
+//}());
+
+//-----КОЛИЧЕСТВО ВКЛАДОК------
+
+var coursesListLenght = document.getElementsByClassName('courses-list-menu')[0].children.length;
+console.log(coursesListLenght);
+
+for (var i = 0; i < coursesListLenght; i++) {
+
+    var coursesListItem = document.getElementsByClassName('courses-list-menu')[0].children[i].
+    querySelector('h4 > span');
+    console.log(coursesListItem);
+
+    var coursesItemsAmount = document.getElementsByClassName('courses-list-menu')[0].children[i].
+    querySelectorAll('.courses-item').length;
+    console.log(coursesItemsAmount);
+
+    coursesListItem.innerHTML = coursesItemsAmount;
+};
+//-------------------------------
